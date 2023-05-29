@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo" onclick="location.href='index.html';">
+                <img src="./images/LogoSmartSleepVerdeAguaTransparentGrande.png" alt="">
+            </div>
+
+            <div class="conta">
+                <div class="btn">
+                    <i class="fa fa-search"></i>
+                </div>
+                <input type="text" placeholder="Buscar">
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="./index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./catalogo.html" class="nav__links">Catálogo</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./acerca.html" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./ayuda.html" class="nav__links">Ayuda</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./login.html" class="nav__links">Iniciar Sesión</a>
+                </li>
+                    <div>
+                        <img onclick="showCart(this)" class="cart" src="./images/cart.png" alt="">
+                        <p class="count-product">0</p>
+                    </div>
+                    <div class="cart-products" id="products-id">
+                        <p class="close-btn" onclick="closeBtn()">X</p>
+                        <h3>Mi carrito</h3>
+                        <div class="card-items">
+                            <!-- <div class="item">
+                                <img src="./images/products/keyboard-1.jpg" alt="">
+                                <div class="item-content">
+                                    <h5>name of product name of product name of product</h5>
+                                    <h5 class="cart-price">45.50$</h5>
+                                    <h6>Amount: 3</h6>
+                                </div>
+                                <span>X</span>
+                            </div>
+            
+                            <div class="item">
+                                <img src="./images/products/keyboard-1.jpg" alt="">
+                                <div class="item-content">
+                                    <h5>name of product name of product name of product</h5>
+                                    <h5 class="cart-price">45.50$</h5>
+                                    <h6>Amount: 3</h6>
+                                </div>
+                                <span class="delete-product" data-id="">X</span>
+                            </div> -->
+                        </div>
+                        <h2>Total: $<strong class="price-total">0</strong></h2>
+                    </div>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <main>
+            <section class="questions_container">
+                <div class="wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="carousel">
+                        <img src="./images/luces.jpg" alt="img" draggable="false">
+                        <img src="./images/calefaxion.jpg" alt="img" draggable="false">
+                        <img src="./images/persianas.jpg" alt="img" draggable="false">
+                        <img src="./images/ia.jpg" alt="img" draggable="false">
+                        <img src="./images/pc.jpg" alt="img" draggable="false">
+                        <img src="./images/lamp.jpg" alt="img" draggable="false">
+                        <img src="./images/cam1.jpg" alt="img" draggable="false">
+                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                 </div>
+            </section>
+        <section class="knowledge">
+            <div class="wrap">
+                <h2>Lista de Productos</h2>
+                
+                    <div class="store-wrapper">
+                        <div class="category_list">
+                            <p href="#" class="category_item" category="all">Todo</p>
+                            <br>
+                            <p href="#" class="category_item" category="luces">Luces</p>
+                            <br>
+                            <p href="#" class="category_item" category="venti">Ventiladores</p>
+                            <br>
+                            <p href="#" class="category_item" category="perci">Percianas</p>
+                            <br>
+                            <p href="#" class="category_item" category="col">Colchon</p>
+                            <br>
+                            <p href="#" class="category_item" category="cerra">Cerraduras</p>
+                            <br>
+                            
+        
+                        </div>
+                        <section class="products-list">
+
+                            <div class="product-item" category="luces">
+                                <img src="./images/luces.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Tira luces led <br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="1" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="luces">
+                                <img src="./images/led2.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Focos de color<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="2" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="luces">
+                                <img src="./images/led3.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Luces minimalistas<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="3" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="product-item" category="luces">
+                                <img src="./images/led4.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Laparas de techo<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="4" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="product-item" category="luces">
+                                <img src="./images//led5.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Barras led<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="5" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="product-item" category="venti">
+                                <img src="./images/vent.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Ventilador Tradicional<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="6" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="venti">
+                                <img src="./images/vent1.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Ventilador estandar<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="7" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="venti">
+                                <img src="./images/vent2.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Ventilador minimalista<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="8" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="venti">
+                                <img src="./images/vent3.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Ventilador moderno<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="9" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="venti">
+                                <img src="./images/vent4.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Ventilador Plus<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="10" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="perci">
+                                <img src="./images/persianas.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Persianas Máx.<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="11" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="perci">
+                                <img src="./images/pre1.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Persianas Tradicionales<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="12" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="perci">
+                                <img src="./images/pre2.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Persianas Modernas<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="13" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="perci">
+                                <img src="./images/pre3.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Persianas para puertas<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="14" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="perci">
+                                <img src="./images/pre4.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Persianas GUM.<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="15" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="col">
+                                <img src="./images/cam1.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Colchon minimalista<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="16" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="col">
+                                <img src="./images/cam2.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Colchon estandar <br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="17" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="col">
+                                <img src="./images/cam3.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Colchon Clásico<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="18" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="col">
+                                <img src="./images/cam4.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Colchon MIN.<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="19" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="col">
+                                <img src="./images/cam5.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Colchon MAX.<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="20" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="cerra">
+                                <img src="./images/cer.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Cerradura Inteligente estandar<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="21" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-item" category="cerra">
+                                <img src="./images/cer2.jpg" alt="" >
+                                <div class="botonesselect">
+                                    <a class="a1" href="">
+                                        Cerradura Inteligente Moderna<br>
+                                        ver más...
+                                    </a>
+                                    <a data-id="22" class="a1" href="">
+                                        Agregar al carrito
+                                    </a>
+                                </div>
+                        </section>
+                    </div>
+            </div>
+        </section>
+        </main> 
+
+        <footer class="footer">
+            <section class="footer__container container">
+                <nav class="nav nav--footer">
+                    <h2 class="footer__title">Smart Sleep</h2>
+    
+                    <ul class="nav__link nav__link--footer">
+                        <li class="nav__items">
+                            <a href="./acerca.html" class="nav__links">Acerca de</a>
+                        </li>
+                        <p class="foot">Da click en "Acerca de" y te llevara al apartado donde el contenido es acerca de nosotros y todo detras de Smart Sleep...</p>
+                        <li class="nav__items">
+                            <a href="./ayuda.html" class="nav__links">Contacto</a>
+                        </li>
+                        <p class="foot">Entra al aparatado de ayuda o comunicate con nostros por medio de: <a href="#">smartSleep01@gmail.com</a></p>
+                    </ul>
+                </nav>
+    
+                <form class="footer__form">
+                    <h2 class="footer__newsletter">Comparte tu opinión:</h2>
+                    <div class="footer__inputs">
+                        <input type="name" placeholder="Comenta:" class="footer__input" name="name">
+                        <input type="submit" value="Enviar" class="footer__submit">
+                    </div>
+                </form>
+            </section>
+    
+            <section class="footer__copy container">
+                <div class="footer__social">
+                    <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+                </div>
+    
+                <h3 class="footer__copyright">Derechos reservados &copy; United Networks</h3>
+            </section>
+        </footer>
+
+    <script src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/carousel.js" defer></script>
+    <script src="./js/carrito.js"></script>
+    
+</body>
+</html>
